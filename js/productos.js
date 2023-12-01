@@ -71,3 +71,20 @@ createApp({
         this.fetchData(this.url)
     },
 }).mount('#app')
+
+
+
+// login.js
+
+function login() {
+    var password = prompt("Ingrese la contraseña:");
+
+    // Verificar la contraseña (puedes compararla con una contraseña predefinida)
+    if (password === "tu_contraseña_secreta") {
+        // Contraseña correcta, redirigir a front_crud.html
+        window.location.href = "../templates/front_crud.html";
+    } else {
+        // Contraseña incorrecta, mostrar mensaje
+        alert("Contraseña incorrecta. Acceso no autorizado.");
+    }
+}

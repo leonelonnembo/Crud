@@ -109,6 +109,29 @@ nav a:hover {
     background-color: #3fa242;
 }
 
+
+
+/* Estilos carrito de compra*/
+.carrito-nav {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: auto;  
+    padding: 0 10px;
+  }
+  
+  .carrito-nav i {
+    font-size: 24px;
+    margin-right: 5px;
+  }
+  
+  #carrito-nav:hover {
+    color: #009688; 
+  }
+/* FIN Estilos carrito de compra*/
+  
+
+
 /* Estilos para el formulario */
 form {
     max-width: 400px;

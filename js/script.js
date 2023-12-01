@@ -1,3 +1,6 @@
+
+
+
 // Realizar una solicitud a la nueva URL para obtener los productos
 fetch('https://leonelonne.pythonanywhere.com/productos')
   .then(response => response.json())
@@ -46,9 +49,62 @@ fetch('https://leonelonne.pythonanywhere.com/productos')
 
 
 
+/*carrito*/
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cartIcon = document.getElementById('cart-icon');
+    const cartContainer = document.getElementById('cart-container');
+    const cartList = document.getElementById('cart-list');
+    let cartCount = 0;
+
+    // Función para mostrar/ocultar el carrito
+    window.toggleCart = () => {
+        cartContainer.classList.toggle('show');
+    };
+
+    // Función para añadir un producto al carrito
+    const addToCart = (producto) => {
+        cartCount++;
+        cartList.innerHTML += `<li>${producto.nombre} - ${producto.precio} ARS</li>`;
+        updateCartCount();
+    };
+
+    // Función para actualizar el contador del carrito
+    const updateCartCount = () => {
+        const cartCountElement = document.getElementById('cart-count');
+        cartCountElement.textContent = cartCount;
+    };
+
+    // Realizar la solicitud a la nueva URL para obtener los productos
+    fetch('https://leonelonne.pythonanywhere.com/productos')
+        .then(response => response.json())
+        .then(data => {
+            const imageContainer = document.getElementById('image-container');
+
+            // Itera sobre los datos y crea elementos para los productos
+            data.forEach(producto => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.style = '--clr: #009688';
+
+                // ... (tu código para crear la tarjeta del producto) ...
+
+                // Añadir evento de clic para agregar al carrito
+                a.addEventListener('click', () => addToCart(producto));
+
+                // ... (tu código para organizar los elementos) ...
+
+                imageContainer.appendChild(card);
+            });
+        })
+        .catch(error => {
+            console.error('Error al cargar los productos desde la API: ' + error);
+        });
+});
 
 
 
+/* fin de carrito */
 
 
   

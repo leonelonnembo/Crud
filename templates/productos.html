@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <title>Productos Veganos</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,6 +25,14 @@
                 <li><a href="/templates/contacto.html">Contacto</a></li>
                 <li><a href="/templates/nosotros.html">Sobre nosotros</a></li>
             </ul>
+            <li id="cart-icon" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </li>
+            <div id="cart-container" class="cart-container">
+                <ul id="cart-list"></ul>
+                <button onclick="checkout()">Checkout</button>
+            </div>
         </nav>
     </header>
     
@@ -41,6 +49,7 @@
             </p>
         </p>
     </div>
+    
         <section class="container" id="image-container">
             
             <!-- Lista de productos veganos (Flexbox) -->
@@ -49,7 +58,7 @@
     </main>
     
     <footer>
-        <a href="../templates/front_crud.html" style="opacity: 0; pointer-events: auto; cursor: default;">
+        <a href="#" id="openCrud" style="opacity: 0; pointer-events: auto; cursor: default;">
             <i class="fas fa-folder"></i>
         </a>
             <i class="fas fa-copyright"></i>
@@ -62,8 +71,7 @@
     
     
     
-    
-    
+    <script src="/js/login.js"></script>
     <script src="/js/script.js"></script>
 </body>
 </html>

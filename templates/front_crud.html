@@ -79,5 +79,16 @@
         <script src="../js/main.js"></script>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
         <script src="../js/productos.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var password = prompt("Ingrese la contraseña para acceder a CRUD:");
+    
+                // Verifica la contraseña (cámbiala según sea necesario)
+                if (password !== "fullstack") {
+                    alert("Contraseña incorrecta. No tienes acceso.");
+                    window.location.href = "/templates/productos.html"; // Redirige de vuelta a productos.html
+                }
+            });
+        </script>
     </body>
     </html>
