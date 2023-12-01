@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@200&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><img class="logo" src="/img/logo.png" alt="Logo Mi mundo Vega" ></li>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/templates/productos.html">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="/templates/nosotros.html">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h1>Contactate con nosotros.</h1>
+            <p class="parrafo-centrado">
+                Si tienes alguna pregunta o comentario, no dudes en ponerte en contacto con nosotros.
+            </p>
+            
+            
+            <form id="form"
+            action="https://formspree.io/f/xayglppn"
+            method="POST"
+            >
+            <label>
+                Email:
+                <span class="obligatorio">*</span>
+                <input type="email" name="email">
+            </label>
+            <label>
+                Nombre:
+                <span class="obligatorio">*</span>
+                <input type="text" name="name">
+            </label>
+            <label>
+                Mensaje:
+                <span class="obligatorio">*</span>
+                <textarea name="message"></textarea>
+            </label>
+            <!-- your other form fields go here -->
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <i class="fa-regular fa-copyright"></i> Derechos&Reservados
+</footer>
+
+
+<script src="/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

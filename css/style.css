@@ -1,0 +1,379 @@
+/* Agrega Roboto Condensed como fuente */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+
+
+/* Estilos generales para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales para todo el contenido */
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #f0f0e2;
+    color: #333;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilos para el encabezado y el pie de página */
+header {
+    position: sticky;
+    background-color: #64c27b;
+    color: black;
+    padding: 10px;
+    display: flex; /* Cambia display a flex */
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+    width: 100%;
+    background-color: #64c27b;
+    color: black;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Estilo para el logo en el encabezado (colocado en el centro) */
+h1 {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: rgb(2, 2, 2);
+    background-color: #48a35f;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 15px;
+    color: black;
+    
+}
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #f0f0e2;
+    margin: 40px;
+}
+
+.title {
+    color: aquamarine;
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+/* Estilos para la lista de navegación */
+nav ul {
+    list-style-type: none;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Estilos para los elementos de la lista */
+nav li {
+    margin: 0 20px;
+    text-align: center;
+    flex: 1;
+}
+
+/* Estilos para los enlaces */
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* Estilos para los enlaces al pasar el mouse */
+nav a:hover {
+    background-color: #3fa242;
+}
+
+/* Estilos para el formulario */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 90px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para las etiquetas de los campos */
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Estilos para los campos de entrada de texto y textarea */
+input[type="email"],
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Estilos para el botón de enviar */
+button[type="submit"] {
+    background-color: #4bbd4f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Estilos para el botón de enviar al pasar el mouse */
+button[type="submit"]:hover {
+    background-color: #3fa242;
+}
+
+.obligatorio {
+    color: red;
+    margin-left: 5px;
+}
+
+.parrafo-centrado {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 30px;
+    color: black;
+}
+.container {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
+
+.container .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 390px;
+    max-width: 100%;
+    height: 300px;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+}
+
+.container .card:hover {
+    height: 370px;
+    cursor: pointer;
+}
+
+.container .card .img-box {
+    position: absolute;
+    top: 20px;
+    width: 350px;
+    height: 220px;
+    background: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover .img-box {
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.container .card .img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+}
+
+.container .card .content {
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    height: 35px;
+    padding: 0 30px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover .content {
+    top: 130px;
+    height: 250px;
+}
+
+.container .card .content > h2 {
+    padding: 0px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr);
+}
+
+.container .card .content p {
+    color: #333;
+}
+
+.container .card .content a {
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    background: var(--clr);
+    color: white;
+    font-weight: 500;
+}
+
+.container .card .content a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+    .container .card {
+        width: 230px;
+        border-radius: 15px;
+    }
+
+    .container .card .img-box {
+        width: 185px;
+        border-radius: 10px;
+    }
+
+    .container .card .content p {
+        font-size: 0.8rem;
+    }
+
+    .container .card .content a {
+        font-size: 0.9rem;
+    }
+}
+/* Estilos para pantallas de PC (escritorio) */
+@media screen and (min-width: 1024px) {
+    .logo {
+        max-width: 120px;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav li {
+        margin: 0 20px;
+        text-align: center;
+    }
+
+    .product-list {
+        justify-content: space-between;
+    }
+
+    .product {
+        width: calc(30% - 30px);
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+/* Estilos para pantallas de celular (móvil) */
+@media screen and (max-width: 767px) {
+    .logo {
+        max-width: 80px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .product {
+        width: calc(50% - 20px);
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+/* Estilos para pantallas de tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .logo {
+        max-width: 100px;
+    }
+}
+
+/* Animación de crecimiento y reducción para el logo */
+@keyframes scale {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Aplica la animación al logo */
+.logo {
+    animation: scale 2s infinite; /* Duración de la animación y repetición infinita */
+}
