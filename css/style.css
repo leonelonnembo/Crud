@@ -102,31 +102,32 @@ nav a {
     text-decoration: none;
     color: black;
     font-weight: bold;
+     border-radius: 5px; /* Añade esquinas redondeadas */
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-/* Estilos para los enlaces al pasar el mouse */
 nav a:hover {
-    background-color: #3fa242;
+    color: #fff; /* Cambia el color del texto al pasar el mouse */
+    
 }
 
-
+/* Estilos específicos para el ícono del carrito */
+nav a.no-hover:hover {
+    color: black;
+    background-color: transparent;
+}
 
 /* Estilos carrito de compra*/
-.carrito-nav {
-    display: flex;
-    align-items: center;
+/* Estilo para el icono del carrito de compras */
+.carrito-n {
+    max-height: 30px; /* Ajusta la altura según tus necesidades */
+
+  }
+  
+  /* Estilo para cambiar el cursor al pasar sobre el carrito de compras */
+  .carrito-n:hover {
     cursor: pointer;
-    margin-left: auto;  
-    padding: 0 10px;
-  }
-  
-  .carrito-nav i {
-    font-size: 24px;
-    margin-right: 5px;
-  }
-  
-  #carrito-nav:hover {
-    color: #009688; 
+    
   }
 /* FIN Estilos carrito de compra*/
   
@@ -188,6 +189,9 @@ button[type="submit"]:hover {
     padding: 30px;
     color: black;
 }
+
+
+/* Card de los productos */
 .container {
     position: relative;
     display: flex;
@@ -196,6 +200,7 @@ button[type="submit"]:hover {
     flex-wrap: wrap;
     gap: 100px 50px;
     padding: 100px 50px;
+    
 }
 
 .container .card {
@@ -210,6 +215,7 @@ button[type="submit"]:hover {
     border-radius: 20px;
     transition: 0.5s;
     box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    
 }
 
 .container .card:hover {
@@ -226,6 +232,7 @@ button[type="submit"]:hover {
     border-radius: 12px;
     overflow: hidden;
     transition: 0.5s;
+    
 }
 
 .container .card:hover .img-box {
@@ -261,15 +268,12 @@ button[type="submit"]:hover {
 }
 
 .container .card .content > h2 {
-    padding: 0px;
+    padding: 5px;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--clr);
 }
 
-.container .card .content p {
-    color: #333;
-}
 
 .container .card .content a {
     position: relative;
@@ -282,9 +286,96 @@ button[type="submit"]:hover {
     font-weight: 500;
 }
 
-.container .card .content a:hover {
-    opacity: 0.8;
+
+/* Fin Card de los productos */
+
+
+
+/*Estilos carrito*/
+
+/* Estilos para el carrito en el header */
+#carrito-header {
+    margin-left: auto;
 }
+
+#carrito-icon-header {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000; /* Cambia el color del icono según tus preferencias */
+}
+
+.carrito-n {
+    width: 30px; /* Ajusta el tamaño del icono según sea necesario */
+    height: 30px;
+    margin-right: 5px; /* Espacio entre el icono y la cantidad en el carrito */
+}
+
+#carrito-cantidad-header {
+    background-color: #ff5733; /* Fondo del número de artículos en el carrito */
+    color: #fff; /* Color del texto del número de artículos en el carrito */
+    border-radius: 50%;
+    padding: 5px; /* Espaciado interno del número en el carrito */
+}
+
+/* Estilos mejorados para la ventana emergente del carrito */
+.carrito-ventana {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #64c27b; /* Color de fondo */
+    border: 1px solid #ccc; /* Color del borde */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000;
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+#carrito-contenido {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#cerrar-carrito {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #000; /* Color negro */
+    border-radius: 50%; /* Hace que el botón sea circular */
+    background-color: rgb(206, 95, 95); /* Color de fondo rojo */
+    border: none; /* Elimina cualquier borde */
+    padding: 5px 10px; /* Ajusta el espacio interno del botón */
+}
+
+
+#carrito-contenido div {
+    border-bottom: 1px solid rgb(3, 3, 3);
+    padding: 10px 0;
+    color: #333; /* Color del texto dentro del carrito */
+}
+
+
+
+/* Color de fondo para los elementos del carrito al pasar el ratón */
+#carrito-contenido div:hover {
+    background-color: #56b16d;
+}
+
+
+#valor-total-carrito {
+    padding: 15px; /* Ajusta el espacio interno del elemento */
+    font-size: 18px; /* Ajusta el tamaño del texto */
+    color: black;
+}
+
+/*Fin Estilos carrito*/
+
+
 
 @media (max-width: 480px) {
     .container .card {

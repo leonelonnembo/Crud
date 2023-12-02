@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+    
 </head>
 <body>
     <header>
@@ -25,24 +25,40 @@
                 <li><a href="#">Productos</a></li>
                 <li><a href="/templates/contacto.html">Contacto</a></li>
                 <li><a href="/templates/nosotros.html">Sobre nosotros</a></li>
+                <li>
+                    <div id="carrito-header">
+                        <a href="#" id="carrito-icon-header">
+                            <img class="carrito-n" src="/img/carrito-de-compras.png" alt="carrito">
+                            <span id="carrito-cantidad-header">0</span>
+                        </a>
+                    </div>
+                    
+                </li>
             </ul>
         </nav>
     </header>
     
     <main>
         <div>
-        <h1>Nuestros Productos</h1>
-        <p>
-            Todos nuestros productos están formulados con una mezcla de ingredientes derivados de la naturaleza
-            <p> • Extractos de frutas y plantas de la Madre Naturaleza </p>
-            <p> • Ingredientes clínicamente probados. “Cruelty Free”</p>
-            <p> • Nuestros productos tienen un muy bajo contenido de alérgenos.</p>
-            <p> 
-                <h2>Te invitamos a recorrer nuestra Tienda Online</h2>
+            <h1>Nuestros Productos</h1>
+            <p>
+                Todos nuestros productos están formulados con una mezcla de ingredientes derivados de la naturaleza
+                <p> • Extractos de frutas y plantas de la Madre Naturaleza </p>
+                <p> • Ingredientes clínicamente probados. “Cruelty Free”</p>
+                <p> • Nuestros productos tienen un muy bajo contenido de alérgenos.</p>
+                <p> 
+                    <h2>Te invitamos a recorrer nuestra Tienda Online</h2>
+                </p>
             </p>
-        </p>
-    </div>
-    
+        </div>
+        <div id="carrito-ventana" class="carrito-ventana">
+            <div id="carrito-contenido">
+                <!-- Aquí se mostrarán los productos del carrito -->
+            </div>
+            <div id="valor-total-carrito">Valor Total: 0 ARS</div>
+            <button id="cerrar-carrito">&times;</button>
+        </div>
+        
         <section class="container" id="image-container">
             
             <!-- Lista de productos veganos (Flexbox) -->
@@ -54,11 +70,11 @@
         <a href="#" id="openCrud" style="opacity: 0; pointer-events: auto; cursor: default;">
             <i class="fas fa-folder"></i>
         </a>
-            <i class="fas fa-copyright"></i>
-            Derechos Reservados
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
+        <i class="fas fa-copyright"></i>
+        Derechos Reservados
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
     </footer>
     
     
