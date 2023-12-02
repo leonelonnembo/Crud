@@ -31,6 +31,14 @@ fetch('https://leonelonne.pythonanywhere.com/productos')
         
         // Actualiza el valor total en la ventana del carrito
         actualizarValorTotal();
+        
+        // Mostrar notificación con Toastr
+        toastr.success('Producto agregado al carrito', '', {
+            positionClass: 'toast-top-right',
+            timeOut: 1500,
+            closeButton: false
+        });
+        
     };
     
     // Función para actualizar el valor total en la ventana del carrito
@@ -72,11 +80,12 @@ fetch('https://leonelonne.pythonanywhere.com/productos')
         p.textContent = `Precio: ${producto.precio} ARS`;
         
         const a = document.createElement('a');
-        a.href = "#";
+        a.href = "";
         a.textContent = 'Sumar al carrito';
         
         // Agrega un listener al botón "Sumar al carrito"
-        a.addEventListener('click', () => {
+        a.addEventListener('click', (event) => {
+            event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
             agregarAlCarrito(producto);
         });
         
