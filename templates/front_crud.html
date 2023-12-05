@@ -83,14 +83,24 @@
         <script src="../js/productos.js"></script>
         <script>
             document.addEventListener("DOMContentLoaded", function() {
-                var password = prompt("Ingrese la contraseña para acceder a CRUD:");
-    
-                // Verifica la contraseña (cámbiala según sea necesario)
-                if (password !== "fullstack") {
-                    alert("Contraseña incorrecta. No tienes acceso.");
-                    window.location.href = "/templates/productos.html"; // Redirige de vuelta a productos.html
-                }
-            });
+    // Intenta obtener la contraseña almacenada en localStorage
+    var storedPassword = localStorage.getItem("crudPassword");
+
+    // Si no hay contraseña almacenada, solicita al usuario que ingrese una
+    if (!storedPassword) {
+        var password = prompt("Ingrese la contraseña para acceder a CRUD:");
+
+        // Verifica la contraseña (cámbiala según sea necesario)
+        if (password !== "fullstack") {
+            alert("Contraseña incorrecta. No tienes acceso.");
+            window.location.href = "/templates/productos.html"; // Redirige de vuelta a productos.html
+        } else {
+            // Almacena la contraseña en localStorage
+            localStorage.setItem("crudPassword", password);
+        }
+    }
+});
+
         </script>
     </body>
     </html>
