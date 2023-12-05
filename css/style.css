@@ -205,16 +205,16 @@ button[type="submit"]:hover {
     position: relative;
     width: 300px;
     max-width: 100%;
-    background: #fff;
+    background: #c8ad7f5e;
     border-radius: 20px;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.466);
 }
 
 .container .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.377);
 }
 
 .container .card .img-box {
@@ -355,7 +355,6 @@ button[type="submit"]:hover {
     }
 
     .container .card .img-box {
-        width: 185px;
         border-radius: 10px;
     }
 
@@ -446,7 +445,16 @@ button[type="submit"]:hover {
     .logo {
         max-width: 100px;
     }
+    .container {
+        padding: 20px;
+    }
+
+    .container .card {
+        max-width: calc(50% - 20px);
+    }
+
 }
+
 
 /* Animación de crecimiento y reducción para el logo */
 @keyframes scale {

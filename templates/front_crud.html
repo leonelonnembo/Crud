@@ -24,7 +24,7 @@
         <div id="app" class="container ">
             <h1>Productos</h1>
             <br>
-            <a class="btn btn-primary" href="../templates/producto_nuevo.html">Nuevo</a>
+            <a class="btn btn-success" href="../templates/producto_nuevo.html">Nuevo</a>
             <br><br>
             <div v-if="error">
                 <p>Lo sentimos , ........</p>
@@ -58,7 +58,7 @@
                                     </td>
                                     <td>
                                         <a class="btn btn-primary" :href="'./producto_update.html?id='+ producto.id" >Editar</a>
-                                        <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)" >Eliminar</button>
+                                        <button type="button" class="btn btn-danger ms-2" v-on:click="eliminar(producto.id)" >Eliminar</button>
                                     </td>
                                 </tr>
                             </tbody>

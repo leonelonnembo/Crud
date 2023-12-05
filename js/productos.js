@@ -56,7 +56,7 @@ createApp({
             fetch(this.url, options)
             .then(function () {
                 alert("Registro grabado")
-                window.location.href = "../templates/productos.html";
+                window.location.href = "../templates/front_crud.html";
             })
             .catch(err => {
                 console.error(err);
@@ -64,7 +64,7 @@ createApp({
             })
         },
         volver () {
-            window.location.href = "../templates/productos.html";
+            window.location.href = "../templates/front_crud.html";
         }
     },
     created() {
