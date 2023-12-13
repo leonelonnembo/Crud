@@ -20,7 +20,7 @@ body {
     min-height: 100vh;
 }
 
-/* Estilos para el encabezado y el pie de página */
+/* Estilos para el encabezado */
 header {
     position: sticky;
     background-color: #64c27b;
@@ -32,6 +32,8 @@ header {
     flex-direction: column;
 }
 
+
+/*  Estilos para el footer  */
 footer {
     margin-top: auto;
     width: 100%;
@@ -40,6 +42,47 @@ footer {
     padding: 10px 0;
     text-align: center;
 }
+footer p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+
+li {
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+.fab {
+    color: #314b81; /* Color de Facebook */
+}
+
+.fab.fa-instagram {
+    color: #c22c47; /* Color de Instagram */
+}
+
+.fab.fa-twitter {
+    color: #1d83c2; /* Color de Twitter */
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffd700; /* Cambia el color al pasar el mouse sobre el enlace */
+}
+
+
 
 /* Estilo para el logo en el encabezado (colocado en el centro) */
 h1 {
