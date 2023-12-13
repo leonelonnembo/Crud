@@ -47,7 +47,7 @@ footer p {
     font-size: 16px;
 }
 
-ul {
+footer ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -56,7 +56,7 @@ ul {
     align-items: center; /* Alinea verticalmente los elementos */
 }
 
-li {
+footer li {
     margin: 0 10px;
     font-size: 24px;
 }
